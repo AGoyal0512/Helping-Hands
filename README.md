@@ -14,3 +14,7 @@ Our project is intended to be used primarily by doctors or therapists of the peo
 
 Our model takes in this text response, and predicts the possibility of whether the person has suicidal thoughts or not. With improvement with accuracy of the model (which currently stands at roughly 90%), we can increasingly trust its results and rely on it.  This will help identify people who potentially carry suicidal thoughts and they can be helped out by their doctors or therapists.
 
+> ## Dataset
+
+Since our dataset was large, we couldn't upload it to the repository due to space restrictions of 25 MB. So, we are uploading our data as a Google Drive link here:
+https://drive.google.com/file/d/1f_YYS-dN8fjjQFrR60vtKKlIYivu3kqU/view?usp=sharing
