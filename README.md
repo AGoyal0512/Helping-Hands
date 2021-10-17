@@ -18,3 +18,7 @@ Our model takes in this text response, and predicts the possibility of whether t
 
 Since our dataset was large, we couldn't upload it to the repository due to space restrictions of 25 MB. So, we are uploading our data as a Google Drive link here:
 https://drive.google.com/file/d/1f_YYS-dN8fjjQFrR60vtKKlIYivu3kqU/view?usp=sharing
+
+> ## Presentation
+
+This is the link to our presentation: https://docs.google.com/presentation/d/12tAqcnzIkWKdH9HclqDC69s7dIlLCjDhREpeyOQGeCo/edit?usp=sharing
