@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
+import RF_NLP
+
+clf = RF_NLP.suicide_predictor()
 
 app = Flask(__name__)
 
@@ -25,12 +28,15 @@ def assess():
 
 @app.route("/form", methods=['POST'])
 def post():
+    msg_features = clf.clean_str(request.form.get("text"))
+    prediction = clf.predict(msg_features)
     first = request.form.get("First")
     last = request.form.get("Last")
     subject = "Patient: " + first + " " + last
     msg = Message(subject, sender = 'HelpingHands0018@gmail.edu', recipients = [request.form.get("email")])
     msg.body = "Patient's number: " + request.form.get("Phone")
-    msg.body = msg.body + "\n" + "Patient's response: " + request.form.get("text")
+    msg.body = msg.body + "\n" + "Patient's response: " + request.form.get("text") + "\n"
+    msg.body = msg.body + "Prediction: " + str(prediction[0])
     mail.send(msg)
     return render_template("assess.html")
 
